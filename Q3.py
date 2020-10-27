@@ -2,13 +2,11 @@
 def caesar_cipher(word, shift):
     new = []
     for i in word:
-        if i != " ":
-            encrypted_char = ord(i) + shift
-            new.append(encrypted_char)
+        encrypted_char = ord(i) + shift
+        new.append(encrypted_char)
     final = ""
     for letter in new:
         final += chr(letter)
-
     return final
 
 choice = input()
