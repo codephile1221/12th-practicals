@@ -1,4 +1,3 @@
-import sys
 def copy(S,P=''):
     if len(S)==0:
         return P
