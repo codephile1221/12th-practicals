@@ -7,7 +7,16 @@ def caesar_cipher(word, shift):
     final = ""
     for letter in new:
         final += chr(letter)
-    return final
+
+    display = ""
+
+    for char in final:
+        if char.isalpha():
+            display += char
+
+        else:
+            display += " "
+    return display
 
 choice = input()
 number = int(input())
