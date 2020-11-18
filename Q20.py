@@ -77,7 +77,7 @@ def selectionsort(L):
         for j in range(i+1, len(L)): 
             if L[min_idx] > L[j]: 
                 min_idx = j         
-            L[i],L[min_idx] = L[min_idx],L[i]
+        L[i],L[min_idx] = L[min_idx],L[i]
     print ("Sorted array")
     print(L)
  
