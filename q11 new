@@ -1,0 +1,49 @@
+def filewrite(x):
+    f1= open('class9.txt', 'w' )
+    for i in range (x):
+        y=input('Enter student name = ')
+        z=float(input('Enter student aggregate marks = '))
+        f1.write(f"{y}:{z}")
+        f1.write('\n')
+        print(y + ' : ' + str(z))
+    f1.close()
+x=int(input('Enter number of students = '))
+filewrite(x)
+def classes(x):
+    f1= open('class9.txt', 'r' )
+    f2= open('class10A.txt', 'w' )
+    f3= open('class10B.txt', 'w' )
+    f4= open('class10C.txt', 'w' )
+    s=f1.readlines()
+    l=len(s)
+    for i in range(1,l+1):
+        if i%3==1:
+            f2.write(s[i-1])
+        elif i%3==2:
+            f3.write(s[i-1])
+        else:
+            f4.write(s[i-1])
+    f1.close()
+    f2.close()
+    f3.close()
+    f4.close()
+    f2=open('class10A.txt', 'r' )
+    a=f2.readlines()
+    print('Class 10 A = ')
+    for i in a:
+        w=i.strip('\n')
+        print(w)
+    f3=open('class10B.txt', 'r' )
+    a=f3.readlines()
+    print('Class 10 B = ')
+    for i in a:
+        w=i.strip('\n')
+        print(w)
+    f4=open('class10C.txt', 'r' )
+    a=f4.readlines()
+    print('Class 10 C = ')
+    for i in a:
+        w=i.strip('\n')
+        print(w)
+classes(x)
+
