@@ -1,6 +1,6 @@
 import mysql.connector
 import sys
-mydb=mysql.connector.connect(host='localhost',user='root',passwd='nazish123')
+mydb=mysql.connector.connect(host='localhost',user='root',passwd='')
 mycursor=mydb.cursor()
 if mydb.is_connected()==False:
     print('Connection wasnt established')
