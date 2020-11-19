@@ -16,7 +16,7 @@ while command != '4':
             vip.append(tokenID)
         elif priority.lower() == 'n':
             balcony.append(tokenID)
-        elif priority.lower == 'l':
+        elif priority.lower() == 'l':
             regular.append(tokenID)
         else:
             print("Invalid Priority")
@@ -34,17 +34,22 @@ while command != '4':
             print("ID not found ")
     elif command == '3':
         priority = input("Enter the priority of the tokenID to be changed  ")
+        if priority not in ['h','n','l']:
+            print("Invalid priority ")
+            continue
         tokenID1 = input("Enter the tokenID of the priority you want to change ") 
+        if tokenID1 not in ref[priority]:
+            print("Element does not exist in queue ")
+            continue
         newpriority = input("Enter the new priority ") 
-        print(newpriority)
-        print(ref[priority])
         ref[priority].remove(tokenID1)
         if newpriority.lower() == 'h':
             vip.append(tokenID1)
         elif newpriority.lower() == 'n':
             balcony.append(tokenID1)
-        elif newpriority.lower == 'l':
+        elif newpriority.lower() == 'l':
             regular.append(tokenID1)
+        print(f"tokenID changed to queue {ref[newpriority]} ")
     elif command == '4':
         break
     else:
